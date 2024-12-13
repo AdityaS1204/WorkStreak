@@ -1,0 +1,11 @@
+
+{
+  "manifest_version": 3,
+  "name": "Streak Calendar",
+  "version": "1.0",
+  "description": "Track your daily streaks with a calendar",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

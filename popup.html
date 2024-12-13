@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 400px;
+      padding: 20px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      background-color: rgb(5, 5, 57);
+      color: whitesmoke;
+    }
+    
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+      margin-top: 20px;
+    }
+    
+    .day {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 9px;
+      cursor: pointer;
+    }
+    .day:hover {
+      background-color: #f0f0f0;
+      color: black;
+    }
+    
+    .completed {
+      background-color: #4CAF50;
+      color: white;
+    }
+    
+    .missed {
+      background-color: #b2170c;
+      color: white;
+    }
+    
+    .month-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .month-nav button{
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
+      cursor: pointer;
+      /* padding: 6px; */
+    }
+    /* .month-nav button:hover{
+     
+    } */
+
+    .stats {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: rgb(5, 5, 57);
+      color: whitesmoke;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: large;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="month-nav">
+    <button id="prevMonth">&lt;</button>
+    <h2 id="monthYear"></h2>
+    <button id="nextMonth">&gt;</button>
+  </div>
+  <div class="calendar" id="calendar"></div>
+  <div class="stats" id="stats">
+    Current Streak: <span id="currentStreak">0</span> days<br>
+    Longest Streak: <span id="longestStreak">0</span> days
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
